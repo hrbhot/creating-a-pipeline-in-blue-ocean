@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm install'
+        sh '''apt-get update
+apt-get install -y libltdl7
+npm install'''
       }
     }
   }
